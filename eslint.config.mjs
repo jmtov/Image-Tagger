@@ -6,6 +6,7 @@ import pluginStylistic from '@stylistic/eslint-plugin-js';
 import pluginImport from 'eslint-plugin-import';
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import pluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import pluginReactHooks from 'eslint-plugin-react-hooks';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -22,6 +23,7 @@ export default [
   {
     plugins: {
       '@stylistic/js': pluginStylistic,
+      'react-hooks': pluginReactHooks,
     },
     rules: {
       '@typescript-eslint/adjacent-overload-signatures': 'error',
@@ -208,7 +210,6 @@ export default [
       indent: 'off',
       quotes: ['error', 'single', { avoidEscape: true }],
       semi: ['error', 'always'],
-
       'prettier/prettier': [
         'error',
         {

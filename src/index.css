@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: inherit;
+  }
+
+  body {
+    @apply font-sans;
+
+    --primary: 20 40 80;
+    --speed-slow: 0.5s;
+    --speed-normal: 0.3s;
+    --speed-fast: 0.15s;
+
+    box-sizing: border-box;
+    color: rgb(var(--primary));
+  }
+}
+
+
+@layer components {
+  @starting-style {
+    .fade-in-left {
+      opacity: 0;
+      transform: translateX(-1rem);
+    }
+  }
+
+  @starting-style {
+    .fade-in-center {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  }
+}
